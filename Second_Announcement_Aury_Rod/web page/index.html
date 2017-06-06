@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alice the looking glass</title>
+	<link rel="stylesheet" type="text/css" href="CSS/myCSS.css">	
+	<style type="text/css">
+	
+		body{
+			background-image: url("images/main.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+
+		/*Main div*/
+		#maindiv{
+			height: 120%;
+			margin: 0 40px  0 30px; 
+		    animation:spindiv 40s linear 1;	
+		    animation-delay: 7s;
+		    background-color: lightblue;
+
+		 }
+		/*contairner*/
+		#divVideo{
+			position: absolute;
+			width:100%;
+			height: 100px;
+			background-size:cover ;
+			margin:0 20px 0 20px;
+		    background-color: lightblue;
+		}
+
+
+		#dd,#menuBottom{
+			background-image: url(images/background.jpg);
+			margin:0 20px 0 20px;
+		}
+
+		#menuBottom{
+			bottom: 0;
+			margin: 0;
+			padding-bottom:0;
+			position: fixed;
+			width: 100%;
+			} 
+
+		}	
+
+	
+	</style>
+
+</head>
+<body>
+	<div id="maindiv" style=" height: 900px">	
+	
+		<div id ="DivVideo" style="">
+			<h1 class="myh1" style="height: 6%"> Alice through the looking glass</h1>
+			<div style="width: 100%; height: 95% ; background-color: green ;display:table-cell;vertical-align:middle;margin-top: 4%; margin-bottom: : 4%; " ;>
+				<video  width="100%" height="100%" controls volumen autoplay preload="auto">
+				  <source src="media/maintrailer.mp4" type="video/mp4">
+				</video>	
+			</div>	
+			<h1 class="myh1" style="height: 6%">Tick Tock</h1>
+		</div>
+
+
+
+		<div id ="menuBottom">
+			<ul>	
+				<li><a href="index.html" class="lmenu">Home</a></li>
+				<li><a href="castinfo.html" class="lmenu" >About the movie </a></li>
+				<li><a href="gallery.html" class="lmenu" >Media</a></li>
+
+				<li style="text-align:right; font-size: 14px;font-weight:bold; color :yellow;bottom: 	0;top:0  " > Our Social Media</li>
+				<li><a href="https://www.instagram.com/disneyalice/?hl=en" class="lmenu"  target="_blank" ><img src="images/insta.ico" style="width:25px;height:25px;border:0"> </a></li>
+				<li><a href="https://www.facebook.com/DisneyAlice/" class="lmenu" target="_blank" ><img src="images/faceb.ico" style="width:25px;height:25px;border:0"> </a></li>
+				<li><a href="https://twitter.com/disneyalicefilm?lang=en" class="lmenu" target="_blank" ><img src="images/tweet.ico" style="width:25px;height:25px;border:0"> </a></li>
+
+			</ul>	
+		</div>
+
+	</div>
+
+
+</body>
+</html>

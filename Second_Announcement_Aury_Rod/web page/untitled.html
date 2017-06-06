@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Gallery </title>
+	<link rel="stylesheet" type="text/css" href="CSS/myCSS.css">	
+	<style type="text/css">
+	
+		body{
+			background-image: url("images/main.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		div{
+			overflow: auto;
+		}
+
+		/*Main div*/
+		#maindiv{
+			height: 900px;
+			width: 90%;
+			margin: 0 40px  0 30px; 
+		    animation-delay: 7s;
+		    background-color: lightblue;
+
+		 }
+
+		#dd,#menuBottom{
+			background-image: url(images/background.jpg);
+			margin:0 20px 0 20px;
+			position:  fixed;
+			bottom: 0;
+		}
+
+		#menuBottom{
+			bottom: 0;
+			margin: 0;
+			padding-bottom:0;
+			position: fixed;
+			width: 100%;
+			} 
+
+		}	
+		#bntBack,#bntforth{
+			width: 200px;
+			height: 80px;
+			border-radius: 20px;   
+			background-size: cover;
+			background-color: lightblue;
+			font-size: 28px;
+			font-weight: 90;
+		}
+			
+		/*contairner*/
+		#myslide{
+			background-color: silver;
+			width:98%;
+			height: 98%;
+			background-size:cover ;
+			margin:20px 20px 20px 20px;
+			padding: 0;
+			display: flex;
+			align-items: center;
+		}
+
+		#bntBack,#bntforth{
+			background-image: url("images/back.ico");
+			width: 70px; 
+			border-radius: 35px;
+			height: 70px;
+			background-size: cover; 
+		}
+		#bntforth{
+			background-image: url("images/forth.ico");
+
+		}
+
+		#imageDiv{
+			width: 98%; 
+			height: 98%;
+			background-image: url("images/image1.jpg");
+			background-size: cover;
+		}	
+
+			
+	</style>
+		
+
+</head>
+<body>
+	<div id="maindiv" style=" height: 900px">	
+	
+
+		<div id ="myslide" style="">
+			<button id="bntBack" onclick="myNextIma(-1)"  style="left:0;" >Back</button>
+			<div id="imageDiv" >
+			</div>
+			<button id="bntforth" onclick="myNextIma(1)"  style="right:0;">Forth</button>
+		</div>
+
+
+		<div id ="menuBottom">
+			<ul>	
+				<li><a href="index.html" class="lmenu">Home</a></li>
+				<li><a href="info.html" class="lmenu" >About the movie </a></li>
+				<li><a href="music.html" class="lmenu" >Media</a></li>
+
+				<li style="text-align:right; font-size: 14px;font-weight:bold; color :yellow;bottom: 	0;top:0  " > Our Social Media</li>
+				<li><a href="https://www.instagram.com/disneyalice/?hl=en" class="lmenu"  target="_blank" ><img src="images/insta.ico" style="width:25px;height:25px;border:0"> </a></li>
+				<li><a href="https://www.facebook.com/DisneyAlice/" class="lmenu" target="_blank" ><img src="images/faceb.ico" style="width:25px;height:25px;border:0"> </a></li>
+				<li><a href="https://twitter.com/disneyalicefilm?lang=en" class="lmenu" target="_blank" ><img src="images/tweet.ico" style="width:25px;height:25px;border:0"> </a></li>
+
+			</ul>	
+		</div>
+
+	</div>
+
+</body>
+	<script type="text/javascript">
+		var myImages=[""];
+		var imageNum= 1;
+		var k=0;
+		
+		imageNum=1;
+
+		while (k<=8){
+			myImages[k]="url('images/image"+(k+1) +".jpg')";
+			k=k+1;
+		}
+
+		function myNextIma(n) {
+			seePic(imageNum+= n);
+		}
+
+		function seePic(n) {
+
+			if (n > myImages.length) {
+				imageNum= 1;
+			}    
+
+			if (n < 1) {
+				imageNum= myImages.length
+			}
+			n=0;
+			//document.getElemenyById("imageDiv").style["background-image"]=myImages[imageNum-1];  
+			document.getElementById("imageDiv").style.background = "#f3f3f3 "+ myImages[imageNum-1] +" no-repeat center center"
+
+
+		}
+
+	</script>
+
+
+
+</html>
